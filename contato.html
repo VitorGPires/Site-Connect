@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Fale com a Conecttec</title>
+    <meta name="description" content="Entre em contato com a Conecttec. Tire suas dúvidas, solicite suporte ou saiba mais sobre nossos planos de internet fibra no Distrito Federal.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html"><img src="./img/Fundo.png" alt="Conecttec Logo" class="logo"></a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#planos">Planos</a></li>
+                    <li><a href="empresa.html">Empresa</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-section contato-page-section">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <div class="contato-layout-wrapper">
+                    <div class="contato-info-col">
+                        <div class="contato-info-header">
+                            <i class="fas fa-headset fa-3x contato-icon"></i>
+                            <h3>FALE CONOSCO</h3>
+                        </div>
+                        <p class="contato-intro">Entre em contato pelos telefones ou envie um e-mail preenchendo o formulário ao lado.</p>
+                        
+                        <div class="info-group">
+                            <p class="info-item"><i class="fas fa-phone-alt"></i> (61) 99845-0205</p>
+                            <p class="info-item"><i class="fas fa-tty"></i> (61) 4042-7081</p>
+                            <p class="info-item"><i class="fas fa-envelope"></i> contato@conecttec.net.br</p>
+                        </div>
+
+                        <div class="horarios-group">
+                            <h4>Horário de Atendimento por Telefone</h4>
+                            <p>De Domingo a Segunda<br>Das 08:00h às 21:00h</p>
+                        </div>
+                        <div class="horarios-group">
+                            <h4>Horário de Atendimento Técnico</h4>
+                            <p>De Domingo a Segunda<br>Das 09:00h às 18:00h</p>
+                        </div>
+                    </div>
+
+                    <div class="contato-form-col">
+                        <div class="contato-form"> 
+                            <form action="#" method="POST"> 
+                                <div class="form-row">
+                                    <div class="form-group form-group-half">
+                                        <label for="nome">Nome*</label>
+                                        <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+                                    </div>
+                                    <div class="form-group form-group-half">
+                                        <label for="email">E-Mail*</label>
+                                        <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group form-group-half">
+                                        <label for="telefone">Telefone com DDD*</label>
+                                        <input type="tel" id="telefone" name="telefone" required placeholder="(XX) XXXXX-XXXX">
+                                    </div>
+                                    <div class="form-group form-group-half">
+                                        <label for="assunto">Assunto*</label>
+                                        <input type="text" id="assunto" name="assunto" required placeholder="Sobre o que você quer falar?">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="mensagem">Mensagem*</label>
+                                    <textarea id="mensagem" name="mensagem" rows="6" required placeholder="Digite sua mensagem aqui..."></textarea>
+                                </div>
+                                <div style="text-align: center;">
+                                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <a href="https://wa.me/5561998450205" class="whatsapp-float" target="_blank" aria-label="Fale conosco pelo WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
+        </section>
+    </main>
+
+    <footer class="site-footer-bottom">
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Conecttec Internet. Todos os direitos reservados.</p>
+            <p>Distrito Federal - Conectando você.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script> 
+    <script>
+        // Script para preencher o assunto se veio de um link de plano (contato.html?plano=...)
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const planoSelecionado = urlParams.get('plano');
+            const assuntoInput = document.getElementById('assunto');
+
+            if (planoSelecionado && assuntoInput) {
+                assuntoInput.value = `Interesse no Plano ${planoSelecionado}`;
+                // Opcional: Focar no campo da mensagem ou outro campo
+                // document.getElementById('mensagem').focus();
+            }
+        });
+    </script>
+</body>
+</html>
